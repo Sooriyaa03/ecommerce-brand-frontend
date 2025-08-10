@@ -25,7 +25,3 @@ It is designed to elegantly present different product lines offered by the brand
 ![Homepage](images/home.png)  
 ![Product Showcase](images/product_lines.png)
 ![Footer](images/footer.png)
-
----
-
-## Project Structure
