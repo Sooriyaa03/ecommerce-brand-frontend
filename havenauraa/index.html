@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />	
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-inverse dummy"></nav>
+<nav class="navbar navbar-expand-md navbar-inverse navbar-fixed-top edits">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+      	</button>
+      	<li><a class="navbar-brand" href="#"><img src="halogo.png" class="img-fluid" width="185" height="74"></a></li>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    	<ul class="nav navbar-nav">
+    	  <li><a href="#">Home</a></li>
+    	  <li><a class="contact" href="#" id="opentwo">Contact</a></li>
+    	  <li><a href="#" id="openone">Cart</a></li>
+    	</ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="restaurant.jpg" style="width:100%">
+  <div class="text"><button class="button-81" role="button" id='butt1'>View Cafe Products</button></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="parlour.jpg" style="width:100%">
+  <div class="text"><button class="button-81" role="button" id='butt2'>View Salon Products</button></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="gym.jpg" style="width:100%">
+  <div class="text"><button class="button-81" role="button" id='butt3'>View Gym Products</button></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="home.jpg" style="width:100%">
+  <div class="text"><button class="button-81" role="button" id='butt4'>View Home Products</button></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="beautycare.jpg" style="width:100%">
+  <div class="text"><button class="button-81" role="button" id='butt5'>View Skin Products</button></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="clothing.jpg" style="width:100%">
+  <div class="text"><button class="button-81" role="button" id='butt6'>View Clothing Products</button></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="myModal" class="modals">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Empty Cart</h1>
+    No items have been added to the cart. It will not be possible to add items to the cart. The website is only a project for an event submission and does not have any intention to take orders.
+  </div>
+</div>
+
+<div id="myModal2" class="modals">
+  <div class="modal-content">
+    <span class="close2">&times;</span>
+    <h1>Sai Jaya Sooriyaa and Nitish Kumaar</h1>
+    +917200803680 sooriyaa03@gmail.com {The website is created for Concurra Webmaster event in Stella Maris College.}
+  </div>
+</div>
+
+<script>
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("openone");
+var span = document.getElementsByClassName("close")[0];
+
+var modal2 = document.getElementById("myModal2");
+var btn2 = document.getElementById("opentwo");
+var span2 = document.getElementsByClassName("close2")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+
+
+<center>
+<hr>
+<br>
+<h3>Haven Auraa</h3>
+<hr class="style-three">
+<p>Introducing Haven Auraa, a visionary brand shaping lifestyles since 2000.<br>With a legacy rooted in precision and innovation, we've meticulously expanded our portfolio over the years, unveiling a diverse range of exquisite products.<br><img src="quality.png" /><br>From timeless home decor to chic cafe and gym essentials, fashion-forward clothing, premium skin care, and expert salon experiences,<br>each category reflects our commitment to professional study and perfection.<br><br>In 2024, Haven Auraa stands as a symbol of refined elegance, offering curated solutions for every facet of your modern lifestyle.</p>
+
+<div class="imagechange">
+  <img src="6.jpg" class="imagesize" id="imgchange">
+</div>
+<br>
+<br>
+<div class="slider">
+  <input type="range" min="2000" max="2024" value="2024" oninput="rangeValue.innerText = this.value" id="myRange">
+  <p id="rangeValue">2024</p>
+</div> 
+
+<script>
+let rangevalue = document.getElementById("myRange");
+let setvalue = document.getElementById("rangeValue");
+let imgchangevalue = document.getElementById("imgchange")
+
+rangevalue.oninput = function() {
+  let getvalue = rangevalue.value;
+  setvalue.innerHTML = this.value;
+  if (getvalue > 0 && getvalue < 2004) {
+    imgchangevalue.setAttribute("src", "1.jpg")
+  } else if (getvalue >= 2005 && getvalue <= 2008) {
+    imgchangevalue.setAttribute("src", "2.jpg")
+  } else if (getvalue >= 2009 && getvalue <= 2012) {
+    imgchangevalue.setAttribute("src", "3.jpg")
+  } else if (getvalue >= 2013 && getvalue <= 2016) {
+    imgchangevalue.setAttribute("src", "4.jpg")
+  } else if (getvalue >= 2017 && getvalue <= 2020) {
+    imgchangevalue.setAttribute("src", "5.jpg")
+  } else if (getvalue >= 2020 && getvalue <= 2024) {
+    imgchangevalue.setAttribute("src", "6.jpg")
+  }
+}
+
+</script>
+   
+<br>
+<hr>
+<br>
+<h3>For Lifestyle</h3>
+<hr class="style-three">
+<p>Crafting a bespoke lifestyle, Haven Auraa merges the realms of comfort and style.<br><br>From our timeless home decor that transforms spaces to the premium skin care products enhancing your natural radiance, and the fashion-forward clothing defining your unique style,<br>we curate a distinctive collection that embodies the essence of refined living.<br><br>Elevate your lifestyle with Haven Auraa, where every product is a testament to our commitment to excellence since 2000.</p>
+
+<br>
+
+<section class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="card">
+        <img class="imageslidesize" src="home_.jpg" alt="card image" />
+        <button class="button-81 catalogue" role="button" id='button1'>View</button>
+    </div>
+    <div class="card">
+        <img class="imageslidesize" src="beautycare_.jpg" alt="card image" />
+        <button class="button-81 catalogue" role="button" id='button2'>View</button>
+    </div>
+     <div class="card">
+        <img class="imageslidesize" src="clothing_.jpg" alt="card image" />
+        <button class="button-81 catalogue" role="button" id='button3'>View</button>
+    </div>
+  </div>
+</section>
+
+<br>
+<hr>
+<br>
+<h3>For Business</h3>
+<hr class="style-three">
+<p>Fuel your business essence with Haven Auraa's curated compilation.<br><br>Our chic salon experiences redefine corporate grooming, our cafe and gym essentials create dynamic workspaces, and our expertly designed gym equipment enhances customer well-being.<br><br>Welcome a holistic business environment where style meets functionality, driven by our commitment to excellence since 2000.<br>Elevate your professional space with Haven Auraa—where business sophistication meets practical innovation.</p>
+<br>
+
+
+<section class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="card">
+        <img class="imageslidesize" src="restaurant_.jpg" alt="card image" />
+        <button class="button-81 catalogue" role="button" id='button4'>View</button>
+    </div>
+    <div class="card">
+        <img class="imageslidesize" src="parlour_.jpg" alt="card image" />
+        <button class="button-81 catalogue" role="button" id='button5'>View</button>
+    </div>
+     <div class="card">
+        <img class="imageslidesize" src="gym_.jpg" alt="card image" />
+        <button class="button-81 catalogue" role="button" id='button6'>View</button>
+    </div>
+  </div>
+</section>
+
+<br id="aim">
+<hr>
+<div class="news-slider">
+
+  <div class="item" id="demo">
+    <center><h3>Home Decor</h3>
+    Transform your living spaces with our diverse range of home decor products, meticulously crafted to blend sophistication and modern aesthetics,<br>adding a touch of timeless elegance to every corner of your home.
+    <hr>
+    <div class="rcorners">
+    <img src="home2.jpg" width="150px" height="150px" /><h4>Statues</h4>Elevate your space with Haven Auraa's exquisite statues, where artistry meets elegance, bringing timeless charm and sophistication to your home decor.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+      <img src="home1.jpg" width="150px" height="150px" /><h4>Paintings</h4>Transform your walls with Haven Auraa's curated paintings, blending artistry and style to create a captivating and inspiring home ambiance.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+    <img src="home3.jpg" width="150px" height="150px" /><h4>Indoor Plants</h4>Bring nature indoors with Haven Auraa's lush indoor plants. Elevate your space with vibrant greenery, fostering a refreshing and tranquil atmosphere.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    </center>
+  </div>
+
+  <div class="item" id="demo">
+    <center><h3>Skin Care</h3>
+    Indulge in self-care luxury with our premium skin products, thoughtfully formulated to enhance your natural radiance.<br>Elevate your daily routine with our meticulously crafted range, designed to nourish, pamper, and bring out your timeless beauty.
+    <hr>
+    <div class="rcorners">
+    <img src="beauty1.jpg" width="150px" height="150px" /><h4>Moisturizer</h4>Nourish your skin with Haven Auraa's Moisturizer. Experience luxurious hydration, as our expert formula enhances radiance, leaving a velvety-smooth complexion.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+      <img src="beauty2.jpg" width="150px" height="150px" /><h4>Sun Screen</h4>Shield your skin with Haven Auraa's Sunscreen. Our advanced formula provides effective protection, ensuring a radiant and sun-kissed glow with confidence.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+    <img src="beauty3.jpg" width="150px" height="150px" /><h4>Face Wash</h4>Revitalize your skin with Haven Auraa's Face Wash. Gentle yet effective, it cleanses and rejuvenates, revealing a refreshed and radiant complexion.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    </center>
+  </div>
+
+  <div class="item" id="demo">
+    <center><h3>Clothing</h3>
+    Define your style with our curated collection of fashion-forward clothing, where trends meet comfort.<br>Unleash your individuality and make a statement with our meticulously crafted garments that embody both flair and ease. 
+    <hr>
+    <div class="rcorners">
+    <img src="clothing1.jpg" width="150px" height="150px" /><h4>Tops</h4>Elevate your style with Haven Auraa's chic Tops. Discover a curated collection blending trendsetting designs, comfort, and timeless elegance for every occasion.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+      <img src="clothing2.jpg" width="150px" height="150px" /><h4>Trousers</h4>Redefine sophistication with Haven Auraa's Trousers. Our curated collection blends comfort and style, ensuring a tailored fit for any occasion.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+    <img src="clothing3.jpg" width="150px" height="150px" /><h4>Footwear</h4>Step into style with Haven Auraa's Footwear. From timeless classics to contemporary trends, discover comfort and elegance that complements your every stride.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    </center>
+  </div>
+
+  <div class="item" id="demo">
+    <center><h3>Cafe</h3>
+    Revitalize your cafe ambiance with our unique range of decor products, thoughtfully designed to infuse a perfect blend of style and comfort,<br>creating an inviting and chic atmosphere for your patrons to savor.
+    <hr>
+    <div class="rcorners">
+    <img src="cafe1.jpg" width="150px" height="150px" /><h4>Cutlery</h4>Elevate your dining experience with Haven Auraa's exquisite cutlery. Impeccably crafted, our designs blend functionality with timeless elegance for a sophisticated touch in your cafe.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+      <img src="cafe2.jpg" width="150px" height="150px" /><h4>Crockery</h4>Adorn your cafe with Haven Auraa's stylish crockery. Elevate your dining experience with our meticulously crafted pieces, marrying functionality and aesthetic appeal.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+    <img src="cafe3.jpg" width="150px" height="150px" /><h4>Dining Sets</h4>Transform your cafe's ambiance with Haven Auraa's Dining Sets. Immerse in style and comfort as our curated designs redefine your dining experience.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    </center>
+  </div>
+
+  <div class="item" id="demo">
+    <center><h3>Salon</h3>
+    Step into a realm of beauty and relaxation at our salon, where expert stylists and premium products converge to redefine your look.<br>Experience the epitome of pampering and transformation, as we craft personalized beauty solutions tailored to enhance your unique style.
+    <hr>
+    <div class="rcorners">
+    <img src="salon1.jpg" width="150px" height="150px" /><h4>Hairdressing Tools</h4>Elevate salon excellence with Haven Auraa's Hairdressing Tools. Precision meets innovation, ensuring every styling session is a masterpiece of creativity and sophistication.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+      <img src="salon2.jpg" width="150px" height="150px" /><h4>Styling Chairs</h4>Redesign your salon with Haven Auraa's Styling Chairs. Combining comfort and modern design, our chairs elevate the styling experience, enhancing both aesthetics and client satisfaction.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+    <img src="salon3.jpg" width="150px" height="150px" /><h4>Styling Mirrors</h4>Indulge in extra clarity at your salon with Haven Auraa's Styling Mirrors. Meticulously crafted for precision, offering a reflection of unparalleled clarity and sophistication.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    </center>
+  </div>
+
+   <div class="item" id="demo">
+    <center><h3>Gym</h3>
+    Elevate your gym experience with our comprehensive range of decor and cutting-edge equipment,<br>expertly curated to inspire motivation and enhance performance, fostering a dynamic and invigorating fitness environment.
+    <hr>
+    <div class="rcorners">
+    <img src="gym1.jpg" width="150px" height="150px" /><h4>Equipments</h4>Elevate your fitness journey with Haven Auraa's Gym Equipment. Precision-engineered for optimal performance, our range blends innovation and durability, ensuring a seamless workout experience.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+      <img src="gym2.jpg" width="150px" height="150px" /><h4>Mats</h4>Enhance your workout space with Haven Auraa's Gym Mats. Designed for comfort and durability, these mats provide the perfect foundation for a safe and effective fitness routine.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    <div class="rcorners">
+    <img src="gym3.jpg" width="150px" height="150px" /><h4>Boxing Kit</h4>Unleash your potential with Haven Auraa's Boxing Kit. Crafted for power and precision, our comprehensive set elevates your training, ensuring a knockout performance every time.<br><button class="button-81 custom" role="button" onclick="myFunction()">View More</button>
+    </div>
+    </center>
+  </div>
+
+  <button id="next">></button>
+  <button id="prev"><</button>
+
+</div>
+
+<script>
+let items = document.querySelectorAll('.news-slider .item');
+let active = 3;
+function loadShow(){
+    items[active].style.transform = `none`;
+    items[active].style.zIndex = 1;
+    items[active].style.filter = 'none';
+    items[active].style.opacity = 1;
+    // show after
+    let stt = 0;
+    for(var i = active + 1; i < items.length; i ++){
+        stt++;
+        items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+    }
+     stt = 0;
+    for(var i = (active - 1); i >= 0; i --){
+        stt++;
+        items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+    }
+}
+loadShow();
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let button1 = document.getElementById('button1');
+let button2 = document.getElementById('button2');
+let button3 = document.getElementById('button3');
+let button4 = document.getElementById('button4');
+let button5 = document.getElementById('button5');
+let button6 = document.getElementById('button6');
+let butt1 = document.getElementById('butt1');
+let butt2 = document.getElementById('butt2');
+let butt3 = document.getElementById('butt3');
+let butt4 = document.getElementById('butt4');
+let butt5 = document.getElementById('butt5');
+let butt6 = document.getElementById('butt6');
+let dive = document.getElementById('aim');
+
+next.onclick = function(){
+   active = active + 1 < items.length ?  active + 1 : active;
+   loadShow();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active -1 : active;
+    loadShow();
+}
+
+button1.onclick = function(){
+    active = 0;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+button2.onclick = function(){
+    active = 1;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+button3.onclick = function(){
+    active = 2;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+button4.onclick = function(){
+    active = 3;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+button5.onclick = function(){
+    active = 4;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+button6.onclick = function(){
+    active = 5;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+butt1.onclick = function(){
+    active = 3;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+butt2.onclick = function(){
+    active = 4;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+butt3.onclick = function(){
+    active = 5;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+butt4.onclick = function(){
+    active = 0;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+butt5.onclick = function(){
+    active = 1;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+butt6.onclick = function(){
+    active = 2;
+    dive.scrollIntoView({behavior: "smooth"});
+    loadShow();
+}
+
+</script>
+
+
+<hr>
+<br>
+<h3>Upcoming Updates</h3>
+<hr class="style-three">
+<button class="button-17" role="button">Bringing the e-commerce enterprise to the US</button><br><br>
+<button class="button-17" role="button">opening additional retail locations in India shortly</button><br><br>
+<button class="button-17" role="button">There will be more product categories and lines soon.</button><br><br>
+
+</center>
+
+<br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#" onclick="myFunction()">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#" onclick="myFunction()">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#" onclick="myFunction()">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+
+    </ul>
+    <p>&copy;2024 Haven Auraa | All Rights Reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  function myFunction() {
+  alert("Won't be prompted to an other page as per Webmaster's Guidelines.");
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
